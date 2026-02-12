@@ -609,6 +609,9 @@ body {
 .socials > a > i:hover {
     font-size: 70px;
 }
+.socials > a > .fab.fa-whatsapp:hover {
+    color: #25D366; /* El color oficial de WhatsApp */
+}
 
 .socials > a > .fab.fa-discord:hover {
     color: #2b1cf1;
@@ -676,4 +679,22 @@ body {
 /* Arreglo para que los puntos no tapen los clics */
 .punto {
     pointer-events: none;
+}
+
+/* Estilos para la foto de perfil */
+.main-text img {
+    display: block;
+    margin: 0 auto 15px auto; /* Centra la imagen y le da espacio abajo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover; /* Evita que la foto se estire */
+}
+
+.main-text img:hover {
+    transform: scale(1.05); /* Se agranda un poquito al pasar el mouse */
+    box-shadow: 0 0 25px rgba(88, 101, 242, 0.8); /* Brilla más fuerte */
+}
+
+/* Ajuste para que el nombre no quede pegado a la foto */
+.main-text h1 {
+    margin-top: 10px;
 }
