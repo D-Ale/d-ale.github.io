@@ -617,3 +617,63 @@ body {
 .socials > a > .fab.fa-github:hover {
     color: #eec1c1;
 }
+
+/* --- NUEVOS ESTILOS PARA LA TAREA (Sin romper lo anterior) --- */
+
+.info-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+    z-index: 5; /* Para que el texto esté sobre los puntos */
+    text-align: left; /* Lectura más fácil para el profe */
+}
+
+.seccion-tarea {
+    background: rgba(255, 255, 255, 0.08); /* Fondo semi-transparente */
+    backdrop-filter: blur(8px); /* Efecto de cristalizado */
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.seccion-tarea h2 {
+    color: #5865F2; /* Color estilo Discord */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(88, 101, 242, 0.3);
+    padding-bottom: 5px;
+}
+
+.grid-datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.dato-item {
+    margin-bottom: 10px;
+}
+
+.label {
+    color: #00d4ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: block;
+}
+
+/* Ajuste para que el cuerpo no oculte las secciones nuevas */
+body {
+    margin-top: 50px; /* Bajamos el margen para que no empiece tan abajo */
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Arreglo para que los puntos no tapen los clics */
+.punto {
+    pointer-events: none;
+}
