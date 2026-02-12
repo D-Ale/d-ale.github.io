@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <title>D-Ale | Referencias Personales</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/60bf55a8b8.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* ESTILOS UNIFICADOS */
+        /* Mantenemos tus estilos que ya funcionan */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background: #1a1a1e linear-gradient(135deg, #1c1b1f, #202227, #1b1820);
             background-size: 400% 400%;
@@ -22,22 +24,12 @@
             overflow-x: hidden;
             position: relative;
         }
-
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        .info-container {
-            max-width: 850px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10; /* Por encima de las estrellas */
-        }
-
-        .main-text { text-align: center; margin-bottom: 40px; }
-
+        .info-container { max-width: 850px; margin: 0 auto; position: relative; z-index: 10; }
         .seccion-tarea {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -46,34 +38,26 @@
             padding: 25px;
             margin-bottom: 25px;
         }
-
         .seccion-tarea h2 { color: #5865F2; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid rgba(88, 101, 242, 0.2); padding-bottom: 5px; }
-
-        .grid-datos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-        }
-
+        .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
         .label { color: #00d4ff; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 2px; }
 
-        /* SOCIALS */
-        .socials { text-align: center; margin-top: 40px; }
-        .socials h1 { margin-bottom: 20px; font-size: 1.8rem; }
+        /* --- SOCIALS (Ajuste de visibilidad) --- */
+        .socials { text-align: center; margin-top: 40px; padding-bottom: 20px; }
+        .socials h1 { margin-bottom: 25px; font-size: 1.8rem; }
         .socials a {
             color: white !important;
-            font-size: 45px;
-            margin: 0 15px;
+            font-size: 55px; /* Un poco más grandes */
+            margin: 0 20px;
             text-decoration: none;
             display: inline-block;
-            transition: transform 0.3s ease, color 0.3s ease;
+            transition: 0.3s;
         }
         .socials a:hover { transform: translateY(-10px); }
         .fa-whatsapp:hover { color: #25D366 !important; }
         .fa-discord:hover { color: #5865F2 !important; }
         .fa-github:hover { color: #adb5bd !important; }
 
-        /* PUNTOS (ESTRELLAS) */
         .punto {
             position: fixed;
             width: 4px;
@@ -86,7 +70,6 @@
             animation: fly 10s linear infinite;
             box-shadow: 0 0 8px white;
         }
-
         @keyframes fly {
             0% { transform: translateY(0); opacity: 0; }
             10% { opacity: 0.8; }
@@ -145,12 +128,18 @@
             </div>
         </div>
 
+        <div class="info-container">
         <div class="socials">
             <h1>Socials</h1>
-            <a href="https://wa.me/59171889644" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://discord.com/users/729416170301816832" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://github.com/D-Ale" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/59171889644" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://discord.com/users/729416170301816832" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://github.com/D-Ale" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
+    </div>
+
+    <div class="punto" style="left: 15%;"></div>
+    <div class="punto" style="left: 45%; animation-delay: 2s;"></div>
+    <div class="punto" style="left: 75%; animation-delay: 4s;"></div>
     </div>
 
     <div class="punto" style="left: 10%; animation-delay: 0s;"></div>
