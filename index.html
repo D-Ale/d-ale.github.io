@@ -5,18 +5,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/60bf55a8b8.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* ESTILOS UNIFICADOS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #1a1a1e linear-gradient(135deg, #1c1b1f, #202227, #1b1820);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: white;
+            min-height: 100vh;
+            padding: 50px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .info-container {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10; /* Por encima de las estrellas */
+        }
+
+        .main-text { text-align: center; margin-bottom: 40px; }
+
+        .seccion-tarea {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .seccion-tarea h2 { color: #5865F2; margin-bottom: 15px; font-size: 1.4rem; border-bottom: 1px solid rgba(88, 101, 242, 0.2); padding-bottom: 5px; }
+
+        .grid-datos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .label { color: #00d4ff; font-weight: bold; font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 2px; }
+
+        /* SOCIALS */
+        .socials { text-align: center; margin-top: 40px; }
+        .socials h1 { margin-bottom: 20px; font-size: 1.8rem; }
+        .socials a {
+            color: white !important;
+            font-size: 45px;
+            margin: 0 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .socials a:hover { transform: translateY(-10px); }
+        .fa-whatsapp:hover { color: #25D366 !important; }
+        .fa-discord:hover { color: #5865F2 !important; }
+        .fa-github:hover { color: #adb5bd !important; }
+
+        /* PUNTOS (ESTRELLAS) */
+        .punto {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            bottom: -20px;
+            z-index: 1;
+            pointer-events: none;
+            animation: fly 10s linear infinite;
+            box-shadow: 0 0 8px white;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-110vh); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
 
     <div class="info-container">
         
         <div class="main-text">
-            <img src="foto.jpg" alt="Paul Alejandro" style="width: 140px; height: 140px; border-radius: 50%; border: 4px solid #5865F2; margin-bottom: 15px; object-fit: cover; box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);">
+            <img src="perfil.jpg" alt="Paul Alejandro" style="width: 140px; height: 140px; border-radius: 50%; border: 4px solid #5865F2; margin-bottom: 15px; object-fit: cover; box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);">
             
             <h1>PAUL ALEJANDRO GUZMÁN CALLE</h1>
-            <p class="sub-text">Materia: Técnicas de Estudio | Perfil de Referencia</p>
+            <p>Materia: Técnicas de Estudio | Perfil de Referencia</p>
         </div>
 
         <div class="seccion-tarea">
@@ -26,7 +113,7 @@
                 <div class="dato-item"><span class="label">Procedencia</span>Llallagua - Potosí, Bolivia</div>
                 <div class="dato-item"><span class="label">Correo Electrónico</span>guzmancallepa@gmail.com</div>
                 <div class="dato-item"><span class="label">Sexo</span>Masculino</div>
-                <div class="dato-item" style="grid-column: 1 / -1;"><span class="label">Motivación</span>Escogí esta carrera porque me fascina entender cómo funcionan los procesos desde su núcleo. Para mí, programar es el arte de crear soluciones donde a veces solo se ven problemas. Me motiva la capacidad de construir arquitecturas digitales que puedan cambiar la forma en que interactuamos con el mundo.</div>
+                <div class="dato-item" style="grid-column: 1 / -1;"><span class="label">Motivación</span>Escogí esta carrera porque me fascina entender cómo funcionan los procesos desde su núcleo. Para mí, programar es el arte de crear soluciones donde a veces solo se ven problemas.</div>
             </div>
         </div>
 
@@ -34,7 +121,7 @@
             <h2><i class="fas fa-graduation-cap"></i> Formación e Idiomas</h2>
             <div class="grid-datos">
                 <div class="dato-item"><span class="label">Grado de Formación</span>Unidad Educativa "Siglo XX - América"</div>
-                <div class="dato-item"><span class="label">Nivel de Idiomas</span>Español (Nativo) • Inglés (Avanzado/Fluidez Natural)</div>
+                <div class="dato-item"><span class="label">Nivel de Idiomas</span>Español (Nativo) • Inglés (Avanzado)</div>
             </div>
         </div>
 
@@ -44,13 +131,10 @@
                 <div class="dato-item">
                     <span class="label">Experiencia Científica</span>
                     <div style="font-size: 0.85rem; line-height: 1.4; margin-top: 5px;">
-                        • Olimpiada Boliviana de Informática (Fase Departamental, 2018-2019)<br>
-                        • OCEPB - Robótica (Fase Departamental, 2019)<br>
-                        • Olimpiadas UMSA - Matemáticas (<strong>Medallista de Bronce Nacional</strong>, 2020)<br>
-                        • XXVII Olimpiada "Canguro Matemático" (<strong>Medallista de Oro Nacional</strong>, 2021)<br>
-                        • Olimpiada Boliviana de Matemáticas (<strong>Medallista de Plata Nacional</strong>, 2021)<br>
-                        • OCEPB - Química (Fase Departamental, 2021/2025)<br>
-                        • OCEPB - Matemática (Fase Departamental, 2022-2023)
+                        • Olimpiada de Informática (2018-2019)<br>
+                        • Olimpiadas UMSA (Medalla de Bronce, 2020)<br>
+                        • Canguro Matemático (Medalla de Oro, 2021)<br>
+                        • Olimpiada de Matemáticas (Medalla de Plata, 2021)
                     </div>
                 </div>
                 <div class="dato-item">
@@ -58,14 +142,6 @@
                     <strong>Instructor de idioma Inglés</strong><br>
                     Instituto CESICOM (Llallagua, 2021-2024)
                 </div>
-            </div>
-        </div>
-
-        <div class="seccion-tarea">
-            <h2><i class="fas fa-user-shield"></i> Destrezas y Referencia</h2>
-            <div class="grid-datos">
-                <div class="dato-item"><span class="label">Destrezas Personales</span>Pensamiento crítico, lógica, resolución de problemas, adaptabilidad</div>
-                <div class="dato-item"><span class="label">Número de Referencia (Tutor)</span>Angélica Calle Limachi • 73880XXX</div>
             </div>
         </div>
 
@@ -77,11 +153,13 @@
         </div>
     </div>
 
-    <div class="puntos-container">
-        <div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div>
-        <div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div>
-        <div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div>
-        <div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div><div class="punto"></div>
-    </div>
+    <div class="punto" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="punto" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="punto" style="left: 35%; animation-delay: 5s;"></div>
+    <div class="punto" style="left: 50%; animation-delay: 1s;"></div>
+    <div class="punto" style="left: 65%; animation-delay: 3s;"></div>
+    <div class="punto" style="left: 80%; animation-delay: 6s;"></div>
+    <div class="punto" style="left: 90%; animation-delay: 2s;"></div>
+
 </body>
 </html>
