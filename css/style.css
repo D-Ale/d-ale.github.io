@@ -134,3 +134,58 @@ body {
 .punto:nth-child(13) { left: 75%; animation-delay: 1s; }
 .punto:nth-child(14) { left: 85%; animation-delay: 3.5s; }
 .punto:nth-child(15) { left: 95%; animation-delay: 2s; }
+
+/* Contenedor de iconos */
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icon-link {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icon-link i {
+    font-size: 50px; /* Tamaño grande */
+    color: #ffffff !important; /* Forzar blanco */
+}
+
+.icon-link:hover {
+    transform: translateY(-10px);
+}
+
+/* Colores de marca al pasar el mouse */
+.fa-whatsapp:hover { color: #25D366 !important; }
+.fa-discord:hover { color: #5865F2 !important; }
+.fa-github:hover { color: #828282 !important; }
+
+/* --- ARREGLO DE LOS PUNTOS (ESTRELLAS) --- */
+.punto {
+    position: fixed; /* Para que floten sobre la pantalla */
+    width: 4px;      /* SI NO TIENEN ESTO, NO SE VEN */
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -10px;
+    z-index: 1;
+    pointer-events: none;
+    animation: flyUp 10s linear infinite;
+    box-shadow: 0 0 8px white;
+}
+
+@keyframes flyUp {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Distribución manual de los puntos para que no salgan todos del mismo sitio */
+.punto:nth-child(1) { left: 10%; animation-delay: 0s; }
+.punto:nth-child(2) { left: 30%; animation-delay: 2s; }
+.punto:nth-child(3) { left: 50%; animation-delay: 4s; }
+.punto:nth-child(4) { left: 70%; animation-delay: 1s; }
+.punto:nth-child(5) { left: 90%; animation-delay: 3s; }
