@@ -590,7 +590,7 @@ body {
 .socials > a {
     /* Bug fix */
     text-decoration: none;
-    opacity: 0.3;
+    opacity: 0.9;
     transition-duration: 1s;
 }
 
@@ -710,4 +710,11 @@ body {
 .main-text img {
     display: block;
     margin: 0 auto 15px auto;
+}
+
+.socials {
+    width: 100%;
+    text-align: center; /* Centra los iconos al final de la caja */
+    margin-top: 30px;
+    padding-bottom: 50px;
 }
