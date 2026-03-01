@@ -19,8 +19,8 @@ export function HeroSection() {
       setTimeout(() => {
         setPhotoIndex((i) => (i + 1) % photos.length)
         setFade(true)
-      }, 400)
-    }, 5000)
+      }, 1200)
+    }, 10000)
     return () => clearInterval(interval)
   }, [])
 
@@ -45,7 +45,7 @@ export function HeroSection() {
               src={currentPhoto}
               alt="Paul Alejandro Guzmán Calle"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover sepia-[0.1] hover:sepia-0 transition-all duration-300"
-              style={{ opacity: fade ? 1 : 0, transition: "opacity 0.4s ease" }}
+              style={{ opacity: fade ? 1 : 0, transition: "opacity 1.2s ease" }}
             />
           </div>
         </div>
