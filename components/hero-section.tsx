@@ -1,10 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Heart, ArrowDown, X } from "lucide-react"
+
+const photos = [
+  "/yo.jpeg",
+  "https://www.gravatar.com/avatar/072e83b4b75ad2e51a3a3eb444ebcf57?s=400",
+]
 
 export function HeroSection() {
   const [open, setOpen] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        setPhotoIndex((i) => (i + 1) % photos.length)
+        setFade(true)
+      }, 400)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const currentPhoto = photos[photoIndex]
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 px-6 overflow-hidden">
@@ -22,9 +42,10 @@ export function HeroSection() {
             title="Click para ampliar"
           >
             <img
-              src="/yo.jpeg"
+              src={currentPhoto}
               alt="Paul Alejandro Guzmán Calle"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover sepia-[0.1] hover:sepia-0 transition-all duration-300"
+              style={{ opacity: fade ? 1 : 0, transition: "opacity 0.4s ease" }}
             />
           </div>
         </div>
@@ -86,7 +107,7 @@ export function HeroSection() {
           <div className="relative" onClick={(e) => e.stopPropagation()}>
             <div className="rounded-2xl p-2 border-2 border-primary/40 bg-card shadow-2xl">
               <img
-                src="/yo.jpeg"
+                src={currentPhoto}
                 alt="Paul Alejandro Guzmán Calle"
                 className="w-72 h-72 md:w-96 md:h-96 rounded-xl object-cover"
               />
