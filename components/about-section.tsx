@@ -32,9 +32,12 @@ export function AboutSection() {
             </p>
 
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
-              {"Sin embargo, creo que un ingeniero no es solo alguien que resuelve problemas técnicos, sino alguien que sabe conectar mundos. Por eso, cuando no estoy sumergido en líneas de código, me encontrarás tocando el bajo eléctrico, donde busco la misma armonía y estructura que en un buen software. También dedico tiempo a la enseñanza del inglés, una labor que me ha enseñado que la comunicación es la base de todo progreso, ya sea entre humanos o entre máquinas. Estas pasiones son mi cable a tierra y mi fuente de inspiración para seguir explorando nuevas tecnologías."}
+              {"Sin embargo, creo que un ingeniero no es solo alguien que resuelve problemas técnicos, sino alguien que sabe conectar mundos. Por eso, cuando no estoy sumergido en líneas de código, me encontrarás tocando el bajo eléctrico, donde busco la misma armonía y estructura que en un buen software."}
             </p>
 
+            <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed mb-4">
+              {"Mi experiencia previa en la enseñanza del inglés me dejó una lección fundamental que aplico hasta hoy: la comunicación es la base de todo progreso, ya sea entre humanos o entre máquinas. Estas pasiones son mi cable a tierra y la fuente de inspiración para seguir explorando nuevas fronteras tecnológicas."}
+            </p>
             <p className="text-muted-foreground font-[var(--font-body)] leading-relaxed">
               {"Mi meta final es fusionar la creatividad con la lógica más pura. Entiendo que esta carrera exige noches de desvelo y una resiliencia inquebrantable ante los errores, pero estoy listo para el reto. Quiero aportar mi grano de arena al desarrollo tecnológico, diseñando herramientas que no solo sean eficientes, sino que tengan un propósito claro y ético. Al final del día, se trata de utilizar el pensamiento computacional como un puente para construir una realidad más conectada, innovadora y, por encima de todo, accesible para cada miembro de nuestra sociedad."}
             </p>
